@@ -6,6 +6,7 @@ import {IconCircleCheck, IconCircleX} from "@tabler/icons-react";
 import Modal from "../../components/Modal.tsx";
 import LoadingSpinner from "../../components/LoadingSpinner.tsx";
 import toast from "react-hot-toast";
+import './pet-details.scss';
 
 const api = new Api();
 
@@ -86,7 +87,7 @@ export default function PetDetails() {
                 }
             }
         } catch (error) {
-            console.log(error)
+            console.log(error);
             toast.error("Something went wrong,\n please try again later", {
                 position: "top-center",
                 duration: 4000
@@ -100,40 +101,40 @@ export default function PetDetails() {
     return (
         <>
             {pet &&
-                <div>
-                    <div className={"w-full flex flex-row justify-between"}>
+                <div className={"pet-details-wrapper"}>
+                    <div className={"pet-details-container"}>
                         <div>
                             <p className={"page-title"}>Pet details</p>
                         </div>
 
-                        <div className={"space-x-3"}>
+                        <div className={"buttons-container"}>
                             {!pet.sold &&
                                 <Button size={"sm"} type="success" onClick={() => setMarkAsSoldModalOpen(true)}>
                                     Mark as sold
                                 </Button>
                             }
 
-                            <Button size={"sm"} type="info" onClick={() => setDeleteModalOpen(true)}>
-                                Edit
-                            </Button>
+                            {/*<Button size={"sm"} type="info" onClick={() => setDeleteModalOpen(true)}>*/}
+                            {/*    Edit*/}
+                            {/*</Button>*/}
 
                             <Button size={"sm"} type="error" onClick={() => setDeleteModalOpen(true)}>
                                 Delete
                             </Button>
                         </div>
                     </div>
-                    <div className={"w-full flex flex-row mt-8 space-x-4"}>
-                        <div className={"w-1/3"}>
+                    <div className={"main-container"}>
+                        <div className={"image-container"}>
 
                             <img src={pet.imgurl} alt="{}"/>
                         </div>
-                        <div className={"w-1/3 grid grid-cols-2 text-xl gap-4"}>
-                            <div className={"space-y-4"}>
+                        <div className={"details-container"}>
+                            <div className={"labels-container"}>
                                 <p>Name:</p>
                                 <p>Breed:</p>
                                 <p>Sold:</p>
                             </div>
-                            <div className={"space-y-4"}>
+                            <div className={"values-container"}>
                                 <p className={""}>{pet.name}</p>
                                 <p>{pet.breed}</p>
                                 <p>

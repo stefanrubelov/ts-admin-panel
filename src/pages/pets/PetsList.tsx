@@ -50,7 +50,6 @@ export default function PetsList() {
             .finally(() => setLoading(false))
     }, [])
 
-
     const onSubmit = async (data: CreatePetDto) => {
         try {
             setLoading(true)
@@ -120,8 +119,8 @@ export default function PetsList() {
     if (loading) return <LoadingSpinner/>;
 
     return (
-        <div className="w-full min-w-0 flex flex-col">
-            <div className="flex flex-row items-center justify-between pb-6 w-full">
+        <div className="pets-container">
+            <div className="top-container">
                 <h2 className="page-title">Pet List</h2>
                 <Button type="info" size="md" onClick={() => {
                     reset({
@@ -136,28 +135,28 @@ export default function PetsList() {
                 </Button>
             </div>
 
-            <div className="relative overflow-x-auto shadow-md rounded-lg w-full min-w-0 flex-shrink">
+            <div className="table-wrapper">
                 <table
-                    className="pets-table w-full table-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-100 min-w-[800px]">
+                    className="pets-table ">
                     <thead>
                     <tr>
-                        <th className="px-3 py-2 min-w-[50px]"></th>
-                        <th className="px-3 py-2 min-w-[80px]">
+                        <th className="min-w-[50px]"></th>
+                        <th className="min-w-[80px]">
                             #
                         </th>
-                        <th className="px-3 py-2 min-w-[120px]">
+                        <th className="min-w-[120px]">
                             Image
                         </th>
-                        <th className="px-3 py-2 min-w-[120px]">
+                        <th className="min-w-[120px]">
                             Name
                         </th>
-                        <th className="px-3 py-2 min-w-[150px]">
+                        <th className="min-w-[150px]">
                             Breed
                         </th>
-                        <th className="px-3 py-2 min-w-[80px]">
+                        <th className="min-w-[80px]">
                             Sold
                         </th>
-                        <th className="px-3 py-2 min-w-[150px]">
+                        <th className="min-w-[150px]">
                             Actions
                         </th>
                     </tr>
@@ -166,30 +165,30 @@ export default function PetsList() {
                     <tbody>
                     {pets.map(pet => (
                         <tr key={pet.id}>
-                            <td className="px-3 py-2 min-w-[50px]">
+                            <td className="min-w-[50px]">
                                 <input type="checkbox" className="accent-white bg-white"/>
                             </td>
-                            <td className="px-3 py-2 min-w-[80px] whitespace-nowrap">
+                            <td className="min-w-[80px]">
                                 {pet.id}
                             </td>
-                            <td className="px-3 py-2 min-w-[120px]">
+                            <td className="min-w-[120px]">
                                 <img src={pet.imgurl} alt={pet.name} height="90" width="90" className="mx-auto"/>
                             </td>
-                            <td className="px-3 py-2 min-w-[120px] whitespace-nowrap">
+                            <td className="min-w-[120px]">
                                 {pet.name}
                             </td>
-                            <td className="px-3 py-2 min-w-[150px]">
+                            <td className="min-w-[150px]">
                                 {pet.breed}
                             </td>
-                            <td className="px-3 py-2 min-w-[80px]">
+                            <td className="min-w-[80px]">
                                 {
                                     pet.sold ?
                                         <IconCircleCheck className="icon text-green-500"/> :
                                         <IconCircleX className="icon text-red-500"/>
                                 }
                             </td>
-                            <td className="px-3 py-2 min-w-[150px]">
-                                <div className="flex flex-row items-center justify-center space-x-2">
+                            <td className="min-w-[150px]">
+                                <div className="actions-container">
                                     <Button size="xs" type="transparent">
                                         <Link to={{
                                             pathname: `/pets/${pet.id}`,
