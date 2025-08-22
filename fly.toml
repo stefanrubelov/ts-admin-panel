@@ -4,12 +4,13 @@
 #
 
 app = 'ts-admin-panel'
-primary_region = 'arn'
+primary_region = 'fra'
 
 [build]
+  dockerfile = './Dockerfile'
 
 [http_service]
-  internal_port = 80
+  internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
@@ -17,7 +18,4 @@ primary_region = 'arn'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
-  memory_mb = 1024
+  size = 'shared-cpu-1x'
