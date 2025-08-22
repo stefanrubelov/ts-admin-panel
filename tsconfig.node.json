@@ -20,8 +20,6 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "@typescript/no-unused-vars": "warn",
-    "@typescript-eslint/no-unused-vars": "warn"
   },
   "include": [
     "vite.config.ts"

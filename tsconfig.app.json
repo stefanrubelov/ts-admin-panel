@@ -24,8 +24,6 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "@typescript/no-unused-vars": false,
-    "@typescript-eslint/no-unused-vars": false
   },
   "include": [
     "src"
