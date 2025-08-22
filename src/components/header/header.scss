@@ -1,0 +1,39 @@
+.header-container {
+  @apply flex flex-row w-full items-center justify-between py-3 px-3 text-gray-700 dark:text-white bg-slate-200 dark:bg-gray-700;
+
+  .left-actions {
+    @apply flex flex-row items-center;
+
+    .hamburger-btn {
+      @apply inline-flex items-center justify-center p-2 rounded hover:bg-gray-600 md:hidden;
+    }
+  }
+
+  .app-name {
+    @apply text-3xl hidden lg:block;
+  }
+
+  .icons-container {
+    @apply flex flex-row items-center space-x-4;
+
+    .reactive-btn {
+      @apply hidden lg:inline-flex items-center justify-center rounded m-0 p-0 w-9 h-9  relative;
+
+      .icon-wrapper {
+        @apply absolute transition-all duration-500 transform flex items-center justify-center;
+
+        svg {
+          @apply size-8;
+        }
+      }
+    }
+
+    svg {
+      @apply w-6 h-6 hover:opacity-85;
+    }
+
+    .user-btn {
+      @apply flex flex-row items-center justify-center space-x-1;
+    }
+  }
+}

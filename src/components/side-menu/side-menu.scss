@@ -1,0 +1,22 @@
+.side-menu {
+  @apply relative flex flex-col h-auto;
+  /* Smoothly animate width changes when collapsing/expanding on desktop */
+  transition: width 300ms ease-in-out;
+
+  .menu-item {
+    @apply text-gray-700 dark:text-white relative flex flex-row items-center space-x-2 z-10 text-xl w-full p-3 m-0 h-16;
+  }
+
+  .active {
+    /* Keep active state subtle; let the indicator provide the background */
+    @apply flex font-semibold text-white;
+  }
+
+  @screen lg {
+    &.collapsed {
+      .item-label {
+        @apply hidden;
+      }
+    }
+  }
+}

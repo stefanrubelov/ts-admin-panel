@@ -1,0 +1,125 @@
+@use "./variables.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply dark:bg-gray-800 bg-white;
+}
+
+.main {
+  @apply dark:bg-gray-800 bg-white;
+}
+
+.container {
+  @apply flex flex-row bg-white dark:bg-gray-800;
+}
+
+.side-menu-container {
+  height: calc(100vh - 60px);
+  /* Let the inner SideMenu control its own width and background. Avoid fixed width here for responsiveness. */
+  @apply flex flex-col min-h-96 w-60 bg-slate-200 dark:bg-gray-700;
+  /* On small screens, the static area should occupy no width (drawer is fixed). From md up, width is dictated by child. */
+  @apply w-0 md:w-auto bg-slate-200 dark:bg-gray-700;
+}
+
+.content-container {
+  @apply w-full;
+}
+
+.page-title {
+  @apply text-xl text-gray-700 dark:text-white font-bold;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(187, 187, 187, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*a {*/
+/*  font-weight: 500;*/
+/*  color: #646cff;*/
+/*  text-decoration: inherit;*/
+/*}*/
+/*a:hover {*/
+/*  color: #535bf2;*/
+/*}*/
+
+/*body {*/
+/*  margin: 0;*/
+/*  display: flex;*/
+/*  place-items: center;*/
+/*  min-width: 320px;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+/*h1 {*/
+/*  font-size: 3.2em;*/
+/*  line-height: 1.1;*/
+/*}*/
+
+/*button {*/
+/*  border-radius: 8px;*/
+/*  border: 1px solid transparent;*/
+/*  padding: 0.6em 1.2em;*/
+/*  font-size: 1em;*/
+/*  font-weight: 500;*/
+/*  font-family: inherit;*/
+/*  background-color: #1a1a1a;*/
+/*  cursor: pointer;*/
+/*  transition: border-color 0.25s;*/
+/*}*/
+/*button:hover {*/
+/*  border-color: #646cff;*/
+/*}*/
+/*button:focus,*/
+/*button:focus-visible {*/
+/*  outline: 4px auto -webkit-focus-ring-color;*/
+/*}*/
+
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    color: #213547;*/
+/*    background-color: #ffffff;*/
+/*  }*/
+/*  a:hover {*/
+/*    color: #747bff;*/
+/*  }*/
+/*  button {*/
+/*    background-color: #f9f9f9;*/
+/*  }*/
+/*}*/
