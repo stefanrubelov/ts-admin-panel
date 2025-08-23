@@ -17,23 +17,33 @@
     @apply flex flex-row items-center space-x-4;
 
     .reactive-btn {
-      @apply hidden lg:inline-flex items-center justify-center rounded m-0 p-0 w-9 h-9  relative;
+      @apply items-center justify-center rounded m-0 p-0 w-9 h-9 relative;
 
       .icon-wrapper {
         @apply absolute transition-all duration-500 transform flex items-center justify-center;
+      }
+    }
 
+    .sidebar-btn {
+      @apply hidden lg:inline-flex;
+      .icon-wrapper {
+        @apply ms-3;
         svg {
-          @apply size-8;
+          @apply size-10;
         }
       }
     }
 
-    svg {
-      @apply w-6 h-6 hover:opacity-85;
+    .theme-btn {
+      @apply inline-flex;
     }
 
     .user-btn {
       @apply flex flex-row items-center justify-center space-x-1;
     }
+  }
+
+  svg {
+    @apply w-6 h-6 hover:opacity-85;
   }
 }

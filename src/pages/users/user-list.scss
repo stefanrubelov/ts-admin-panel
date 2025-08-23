@@ -1,11 +1,11 @@
-.page-content {
-  @apply flex flex-row items-center w-full justify-center mt-32 space-x-6;
+.users-list-container {
+  @apply flex flex-col lg:flex-row  items-center justify-center w-full mt-32 space-y-6 lg:space-x-6 lg:space-y-0;
 
   .title {
-    @apply text-5xl;
+    @apply text-4xl lg:text-5xl;
   }
 
   .icon {
-    @apply odd:size-8 even:size-16;
+    @apply odd:size-6 even:size-10  lg:odd:size-8 lg:even:size-16;
   }
 }

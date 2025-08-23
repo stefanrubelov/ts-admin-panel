@@ -14,10 +14,10 @@ export default function Home() {
     return (
         <>
             <div className={"page-title"}>Home</div>
-            <div className={"page-content "}>
+            <div className={"homepage-container"}>
                 <IconBarrierBlock className={"icon"}/>
                 <IconBulldozer className={"icon"}/>
-                <p className={"title"}>Under construction</p>
+                <p className={"title whitespace-nowrap"}>Under construction</p>
                 <IconBackhoe className={"icon"}/>
                 <IconBarrierBlock className={"icon"}/>
             </div>

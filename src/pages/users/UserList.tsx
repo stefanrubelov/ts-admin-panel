@@ -14,12 +14,13 @@ export default function UserList() {
     return (
         <>
             <div className={"page-title"}>Users</div>
-            <div className={"page-content "}>
+            <div className={"users-list-container"}>
                 <IconBarrierBlock className={"icon"}/>
                 <IconBulldozer className={"icon"}/>
                 <p className={"title"}>Under construction</p>
                 <IconBackhoe className={"icon"}/>
                 <IconBarrierBlock className={"icon"}/>
-            </div>        </>
+            </div>
+        </>
     )
 }

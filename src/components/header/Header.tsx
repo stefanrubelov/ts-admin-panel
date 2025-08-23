@@ -29,24 +29,22 @@ export default function Header({collapsed, onToggleCollapse, onOpenMobileMenu, o
                         {/* Collapse toggle: visible on large screens only */}
                         <button
                             type="button"
-                            className="reactive-btn"
+                            className="reactive-btn sidebar-btn"
                             aria-label="Toggle sidebar"
                             onClick={onToggleCollapse}
                         >
-                      <span
-                          className={`icon-wrapper ${
-                              collapsed ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
-                          }`}
-                      >
-                        <IconLayoutSidebarLeftExpand size={32}/>
-                      </span>
-                            <span
-                                className={`icon-wrapper ${
-                                    collapsed ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
-                                }`}
-                            >
-                        <IconLayoutSidebarLeftCollapse size={32}/>
-                      </span>
+                        <span
+                        className={`icon-wrapper h-10 w-10 ${
+                                collapsed ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+                            }`}>
+                            <IconLayoutSidebarLeftExpand/>
+                        </span>
+                        <span
+                            className={`icon-wrapper h-10 w-10 ${
+                                collapsed ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
+                            }`}>
+                            <IconLayoutSidebarLeftCollapse/>
+                        </span>
                         </button>
                     </div>
                 </div>
@@ -54,7 +52,7 @@ export default function Header({collapsed, onToggleCollapse, onOpenMobileMenu, o
                 <div className={"icons-container"}>
                     <button
                         type="button"
-                        className="reactive-btn !inline-flex"
+                        className="reactive-btn theme-btn"
                         aria-label="Toggle theme"
                         onClick={onThemeToggle}
                     >
