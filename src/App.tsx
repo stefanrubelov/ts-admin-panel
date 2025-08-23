@@ -4,7 +4,6 @@ import UserList from "./pages/users/UserList.tsx";
 import PetsList from "./pages/pets/PetsList.tsx";
 import Header from "./components/header/Header.tsx";
 import SideMenu from "./components/side-menu/SideMenu.tsx";
-import Login from "./pages/login/Login.tsx";
 import {useEffect, useState} from "react";
 import {Toaster} from "react-hot-toast";
 import PetDetails from "./pages/pets/PetDetails.tsx";
@@ -65,11 +64,11 @@ export default function App() {
                                 onCloseMobile={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             />
                         </div>
-                        <div className={`content-container transition-all duration-300 ease-in-out ${isCollapsed ? 'px-2 lg:px-20 py-8' : 'px-2 lg:px-12 py-8'}`}>
+                        <div
+                            className={`content-container ${isCollapsed ? 'px-2 lg:px-20 py-8' : 'px-2 lg:px-12 py-8'}`}>
                             <Outlet/>
                         </div>
                     </div>
-                    {/*<Footer/>*/}
                     <Toaster/>
                 </div>
             </>
@@ -100,10 +99,6 @@ export default function App() {
                             element: <PetDetails/>
                         }
                     ]
-                },
-                {
-                    path: "/login",
-                    element: <Login/>
                 }
             ])}/>
         </>

@@ -22,7 +22,7 @@ export default function Header({collapsed, onToggleCollapse, onOpenMobileMenu, o
                             onClick={onOpenMobileMenu}>
                         <IconMenu2/>
                     </button>
-                    <p className={`app-name ${collapsed ? 'hidden' : ''}`}>
+                    <p className={`app-name ${collapsed ? 'hidden bg-red-500' : 'hidden lg:block'}`}>
                         Pet Shop App
                     </p>
                     <div className={"icons-container"}>
@@ -54,7 +54,7 @@ export default function Header({collapsed, onToggleCollapse, onOpenMobileMenu, o
                 <div className={"icons-container"}>
                     <button
                         type="button"
-                        className="reactive-btn"
+                        className="reactive-btn !inline-flex"
                         aria-label="Toggle theme"
                         onClick={onThemeToggle}
                     >

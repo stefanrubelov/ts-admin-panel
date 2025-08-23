@@ -1,0 +1,11 @@
+.page-content {
+  @apply flex flex-row items-center w-full justify-center mt-32 space-x-6;
+
+  .title {
+    @apply text-5xl;
+  }
+
+  .icon {
+    @apply odd:size-8 even:size-16;
+  }
+}

@@ -10,7 +10,7 @@
   }
 
   .app-name {
-    @apply text-3xl hidden lg:block;
+    @apply text-3xl transition-all duration-300 ease-in-out;
   }
 
   .icons-container {

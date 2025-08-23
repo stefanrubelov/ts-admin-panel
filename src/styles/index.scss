@@ -1,5 +1,3 @@
-@use "./variables.scss";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,14 +26,11 @@
 
 .side-menu-container {
   height: calc(100vh - 60px);
-  /* Let the inner SideMenu control its own width and background. Avoid fixed width here for responsiveness. */
-  @apply flex flex-col min-h-96 w-60 bg-slate-200 dark:bg-gray-700;
-  /* On small screens, the static area should occupy no width (drawer is fixed). From md up, width is dictated by child. */
-  @apply w-0 md:w-auto bg-slate-200 dark:bg-gray-700;
+  @apply flex flex-col min-h-96  w-0 md:w-auto bg-slate-200 dark:bg-gray-700;
 }
 
 .content-container {
-  @apply w-full;
+  @apply w-full transition-all duration-300 ease-in-out;
 }
 
 .page-title {

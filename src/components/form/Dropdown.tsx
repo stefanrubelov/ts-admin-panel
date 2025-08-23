@@ -23,7 +23,7 @@ export default function Dropdown({ name, label, options, registration, error, pl
             setSelected(options[defaultValue])
             registration.onChange({ target: { name, value: defaultValue } })
         }
-    }, [defaultValue])
+    }, [defaultValue, name, options, registration])
 
     const filteredOptions = Object.entries(options).filter(([_, value]) =>
         value.toLowerCase().includes(search.toLowerCase())
