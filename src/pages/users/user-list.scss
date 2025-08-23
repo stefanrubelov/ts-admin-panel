@@ -1,5 +1,5 @@
 .users-list-container {
-  @apply flex flex-col lg:flex-row  items-center justify-center w-full mt-32 space-y-6 lg:space-x-6 lg:space-y-0;
+  @apply text-gray-700 dark:text-white flex flex-col lg:flex-row  items-center justify-center w-full mt-32 space-y-6 lg:space-x-6 lg:space-y-0;
 
   .title {
     @apply text-4xl lg:text-5xl;
