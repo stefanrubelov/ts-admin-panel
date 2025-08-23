@@ -152,7 +152,7 @@ export default function PetDetails() {
 
             <Modal isOpen={isDeleteModalOpen} onClose={() => setDeleteModalOpen(false)}
                    title="Are you sure you want to delete this pet?">
-                <p className={"italic w-full text-center mt-0 pt-0"}>This action is irreversible</p>
+                <p className={"italic w-full text-center mt-0 pt-0 text-gray-700 dark:text-white"}>This action is irreversible</p>
                 <div className="flex justify-between w-full mt-4">
                     <Button type="white" size="sm" onClick={() => setDeleteModalOpen(false)}>
                         Cancel
@@ -165,7 +165,7 @@ export default function PetDetails() {
 
             <Modal isOpen={isMarkAsSoldModalOpen} onClose={() => setMarkAsSoldModalOpen(false)}
                    title="Are you sure you want to mark this pet as sold?">
-                <p className={"italic w-full text-center mt-0 pt-0"}>This action is irreversible</p>
+                <p className={"italic w-full text-center mt-0 pt-0 text-gray-700 dark:text-white"}>This action is irreversible</p>
                 <div className="flex justify-between w-full mt-4">
                     <Button type="white" size="sm" onClick={() => setMarkAsSoldModalOpen(false)}>
                         Cancel

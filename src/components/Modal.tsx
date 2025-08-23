@@ -90,7 +90,7 @@ export default function Modal({
                 ref={modalRef}
                 className={`bg-gray-100 dark:bg-gray-700 rounded-lg p-6 w-full max-w-md relative transform transition-all duration-300 ${isClosing ? 'opacity-0 translate-y-2 scale-95' : 'opacity-100 translate-y-0 scale-100'}`}
             >
-                {title && <h2 className="text-xl font-semibold mt-6 mb-3 text-gray-700 dark:text-white">{title}</h2>}
+                {title && <h2 className="text-xl font-semibold mt-6 mb-3 text-gray-700 dark:text-white text-center">{title}</h2>}
                 <button
                     className="absolute top-4 right-4  text-gray-700 dark:text-white hover:text-black dark:hover:text-gray-300 transform transition duration-200 hover:scale-105"
                     onClick={onClose}

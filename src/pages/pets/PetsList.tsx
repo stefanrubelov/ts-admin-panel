@@ -215,7 +215,8 @@ export default function PetsList() {
             </div>
 
             {/*modal for create/edit*/}
-            <Modal isOpen={isCreateModalOpen} onClose={() => setCreateModalOpen(false)} title="Add New Pet">
+            <Modal isOpen={isCreateModalOpen} onClose={() => setCreateModalOpen(false)}
+                   title={editingPet ? 'Edit pet' : 'Add New Pet'}>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
                     <TextInput
                         name="name"
